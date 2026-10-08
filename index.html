@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 9 Academy | اختبار الصف التاسع</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@500;600;700;800&display=swap');
+:root{--bg:#080b14;--card:#111725;--card2:#151c2d;--text:#f4f7ff;--muted:#9aa6bf;--purple:#8b5cf6;--blue:#3b82f6;--green:#22c55e;--red:#ef4444;--border:#263149}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 10%,#211447 0,transparent 28%),radial-gradient(circle at 90% 20%,#10264b 0,transparent 28%),var(--bg);color:var(--text);font-family:Cairo,Arial,sans-serif;min-height:100vh}
+button{font:inherit;cursor:pointer;border:0}.container{width:min(1100px,92%);margin:auto}.top{padding:22px 0 10px;display:flex;justify-content:space-between;align-items:center}.brand{font-size:22px;font-weight:800}.brand span{color:#a78bfa}.badge{color:#c4b5fd;background:#241747;border:1px solid #4c3290;padding:6px 12px;border-radius:999px;font-size:12px}
+.hero{text-align:center;padding:70px 0 45px}.hero h1{font-size:clamp(35px,6vw,68px);margin:0 0 10px;line-height:1.05}.hero h1 span{background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:17px;max-width:650px;margin:0 auto 32px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:850px;margin:auto}.subject{background:linear-gradient(145deg,rgba(22,29,47,.95),rgba(12,16,28,.95));border:1px solid var(--border);border-radius:24px;padding:30px;text-align:right;transition:.25s;position:relative;overflow:hidden}.subject:hover{transform:translateY(-6px);border-color:#7651d4;box-shadow:0 15px 50px #0005}.subject .icon{font-size:42px}.subject h2{margin:10px 0 4px}.subject p{color:var(--muted);margin:0 0 22px}.start{width:100%;padding:13px;border-radius:13px;background:linear-gradient(90deg,#7c3aed,#2563eb);color:white;font-weight:800}.features{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.chip{font-size:11px;color:#cbd5e1;background:#0d1321;border:1px solid #263149;border-radius:999px;padding:5px 9px}
+.hidden{display:none!important}.quiz{padding:28px 0 50px}.quiz-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:15px}.back{background:#151c2d;color:#dbe4f5;border:1px solid var(--border);padding:9px 14px;border-radius:11px}.progress{height:9px;background:#151c2d;border-radius:99px;overflow:hidden;margin:12px 0 28px}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#8b5cf6,#3b82f6);transition:.3s}
+.qcard{background:rgba(17,23,37,.95);border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:0 20px 60px #0003}.type{color:#a78bfa;font-size:13px;font-weight:800}.question{font-size:27px;font-weight:800;margin:8px 0 25px;direction:ltr;text-align:center;white-space:pre-wrap}.question.ar{direction:rtl}.options{display:grid;gap:12px}.option{background:#151c2d;color:#eef2ff;border:1px solid #2a3650;padding:16px;border-radius:14px;text-align:right;transition:.18s;position:relative}.option:hover{border-color:#7c5bd3;transform:translateX(-2px)}.option.correct{border-color:var(--green);background:#0d2819}.option.wrong{border-color:var(--red);background:#2a1014}.option.disabled{pointer-events:none}.feedback{margin-top:18px;padding:16px;border-radius:15px;display:none}.feedback.show{display:block}.feedback.ok{background:#0b2416;border:1px solid #1c6b3b}.feedback.no{background:#2b1115;border:1px solid #7b2731}.explain{margin-top:15px;background:#0c1220;border:1px solid #27334c;border-radius:14px;padding:16px;direction:ltr;text-align:left;white-space:pre-wrap;font-family:Inter,monospace;line-height:1.65}.next{margin-top:18px;width:100%;padding:14px;border-radius:13px;background:#e5e7eb;color:#101522;font-weight:800;display:none}.next.show{display:block}.counter{color:var(--muted);font-size:13px}
+.result{text-align:center;padding:80px 0}.score{font-size:70px;font-weight:800;background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;color:transparent}.result-card{background:#111725;border:1px solid var(--border);border-radius:25px;padding:35px;max-width:600px;margin:auto}.again{padding:13px 30px;border-radius:13px;background:linear-gradient(90deg,#7c3aed,#2563eb);color:white;font-weight:800;margin-top:18px}
+.mathbox{font-family:Inter,monospace;background:#0a0f1b;border:1px solid #263149;border-radius:16px;padding:22px;font-size:28px;direction:ltr;text-align:center;white-space:pre-line}
+.footer{text-align:center;color:#66728b;padding:30px 0;font-size:12px}
+@media(max-width:700px){.cards{grid-template-columns:1fr}.hero{padding-top:45px}.qcard{padding:20px}.question{font-size:22px}.quiz-head{align-items:flex-start}.score{font-size:55px}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="top"><div class="brand">Grade <span>9</span> Academy</div><div class="badge">اختبارات الصف التاسع</div></header>
+
+<section id="home">
+<div class="hero">
+<h1>اختبر نفسك في <span>الصف التاسع</span></h1>
+<p>موقع تدريبي خاص بالإنجليزي والرياضيات. اختبر معلوماتك، شاهد تصحيحك مباشرة، وتعلم من طريقة الحل.</p>
+</div>
+<div class="cards">
+<div class="subject">
+<div class="icon">🇬🇧</div><h2>English</h2><p>Vocabulary + Present Simple + am / is / are + Negative + Questions</p>
+<div class="features"><span class="chip">كلمات</span><span class="chip">Grammar</span><span class="chip">تصحيح فوري</span></div>
+<button class="start" onclick="startEnglish()">ابدأ اختبار الإنجليزي</button>
+</div>
+<div class="subject">
+<div class="icon">📐</div><h2>Mathematics</h2><p>التوزيع الموسع والمختصر مع 15 سؤالًا واختيارات وشرح الحل.</p>
+<div class="features"><span class="chip">15 سؤال</span><span class="chip">3 اختيارات</span><span class="chip">خطوات الحل</span></div>
+<button class="start" onclick="startMath()">ابدأ اختبار الرياضيات</button>
+</div>
+</div>
+</section>
+
+<section id="quiz" class="quiz hidden">
+<div class="quiz-head"><button class="back" onclick="goHome()">← الرئيسية</button><div><b id="quizTitle"></b><div class="counter" id="counter"></div></div></div>
+<div class="progress"><i id="bar"></i></div>
+<div class="qcard">
+<div class="type" id="qtype"></div>
+<div id="qtext" class="question"></div>
+<div id="mathdisplay" class="mathbox hidden"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" class="next" onclick="nextQuestion()">السؤال التالي →</button>
+</div>
+</section>
+
+<section id="result" class="result hidden">
+<div class="result-card">
+<div style="font-size:45px">🏆</div><h1 id="resultTitle">أحسنت!</h1>
+<div class="score" id="score"></div><p id="resultText"></p>
+<button class="again" onclick="restartCurrent()">إعادة الاختبار</button>
+<button class="back" style="margin-top:10px" onclick="goHome()">العودة للرئيسية</button>
+</div>
+</section>
+<footer class="footer">Grade 9 Academy • English & Mathematics</footer>
+</div>
+
+<script>
+const vocab=[
+["accept","يقبل / يوافق"],["after all","بعد كل شيء"],["amazing","مذهل / رائع"],["beat","يهزم / يتغلب على"],["champion","بطل"],["chance","فرصة"],["coach","مدرب"],["compete","يتنافس"],["competition","منافسة / مسابقة"],["competitive","تنافسي"],["even if","حتى لو"],["give up","يستسلم / يتنازل"],["good sport","شخص رياضي يتقبل الفوز والخسارة"],["I don't mind","لا أمانع / لا يهمني"],["improve","يحسّن / يطوّر"],["let","يسمح"],["lose","يخسر"],["mean a lot to me","يعني لي الكثير"],["object","غرض / شيء"],["practice","يتدرّب"],["promise","يعد"],["proud of","فخور بـ"],["realize","يدرك / يفهم"],["rule","قاعدة / قانون"],["score","نتيجة / نقاط"],["together","معًا"],["whole","كامل / بأكمله"],["win","يفوز"],["future","المستقبل"],["use","يستخدم"]
+];
+
+const math=[
+{q:"(3x + 4)(x + 2)",a:"3x² + 10x + 8",choices:["3x² + 10x + 8","3x² + 8x + 8","3x² + 6x + 8"],e:"(3x + 4)(x + 2)\n= 3x·x + 3x·2 + 4·x + 4·2\n= 3x² + 6x + 4x + 8\n= 3x² + 10x + 8"},
+{q:"(x + 5)(x + 3)",a:"x² + 8x + 15",choices:["x² + 15x + 8","x² + 8x + 15","x² + 5x + 15"],e:"(x + 5)(x + 3)\n= x² + 3x + 5x + 15\n= x² + 8x + 15"},
+{q:"(2x + 3)(x + 4)",a:"2x² + 11x + 12",choices:["2x² + 11x + 12","2x² + 8x + 12","2x² + 7x + 12"],e:"(2x + 3)(x + 4)\n= 2x² + 8x + 3x + 12\n= 2x² + 11x + 12"},
+{q:"(5x + 8)(5x + 8)",a:"25x² + 80x + 64",choices:["25x² + 80x + 64","25x² + 40x + 64","10x² + 80x + 64"],e:"(5x + 8)²\n= (5x)² + 2(5x)(8) + 8²\n= 25x² + 80x + 64"},
+{q:"(x - 4)(x + 8)",a:"x² + 4x - 32",choices:["x² + 4x - 32","x² - 12x - 32","x² + 32x - 4"],e:"(x - 4)(x + 8)\n= x² + 8x - 4x - 32\n= x² + 4x - 32"},
+{q:"(x + 2)(x - 2)",a:"x² - 4",choices:["x² + 4","x² - 4","x² - 2"],e:"(x + 2)(x - 2)\n= x² - 2x + 2x - 4\n= x² - 4"},
+{q:"(4x + 1)(x + 3)",a:"4x² + 13x + 3",choices:["4x² + 13x + 3","4x² + 12x + 3","4x² + 7x + 3"],e:"4x·x + 4x·3 + 1·x + 1·3\n= 4x² + 12x + x + 3\n= 4x² + 13x + 3"},
+{q:"(2x - 5)(x + 2)",a:"2x² - x - 10",choices:["2x² - 7x - 10","2x² - x - 10","2x² + x - 10"],e:"2x·x + 2x·2 - 5x - 10\n= 2x² + 4x - 5x - 10\n= 2x² - x - 10"},
+{q:"(3x - 2)(x - 5)",a:"3x² - 17x + 10",choices:["3x² - 17x + 10","3x² - 15x - 10","3x² - 13x + 10"],e:"3x·x + 3x(-5) - 2x + 10\n= 3x² - 15x - 2x + 10\n= 3x² - 17x + 10"},
+{q:"(x + 7)²",a:"x² + 14x + 49",choices:["x² + 7x + 49","x² + 14x + 49","x² + 49"],e:"(x + 7)²\n= x² + 2(x)(7) + 7²\n= x² + 14x + 49"},
+{q:"(6x + 1)(x + 2)",a:"6x² + 13x + 2",choices:["6x² + 13x + 2","6x² + 12x + 2","6x² + 8x + 2"],e:"6x·x + 6x·2 + 1·x + 2\n= 6x² + 12x + x + 2\n= 6x² + 13x + 2"},
+{q:"(x - 6)(x - 1)",a:"x² - 7x + 6",choices:["x² - 5x + 6","x² - 7x + 6","x² + 7x + 6"],e:"x² - x - 6x + 6\n= x² - 7x + 6"},
+{q:"(2x + 7)(3x + 1)",a:"6x² + 23x + 7",choices:["6x² + 23x + 7","6x² + 21x + 7","6x² + 9x + 7"],e:"2x·3x + 2x·1 + 7·3x + 7\n= 6x² + 2x + 21x + 7\n= 6x² + 23x + 7"},
+{q:"(4x - 3)(x - 2)",a:"4x² - 11x + 6",choices:["4x² - 11x + 6","4x² - 8x + 6","4x² - 5x - 6"],e:"4x² - 8x - 3x + 6\n= 4x² - 11x + 6"},
+{q:"(3x + 2)(2x - 3)",a:"6x² - 5x - 6",choices:["6x² - 5x - 6","6x² + 5x - 6","6x² - 9x + 6"],e:"3x·2x + 3x(-3) + 2·2x + 2(-3)\n= 6x² - 9x + 4x - 6\n= 6x² - 5x - 6"}
+];
+
+let current=[],idx=0,score=0,mode="";
+function startEnglish(){
+ mode="english"; current=buildEnglish(); idx=0;score=0;showQuiz();
+}
+function buildEnglish(){
+ let arr=[];
+ const shuffled=[...vocab].sort(()=>Math.random()-.5);
+ shuffled.slice(0,12).forEach((v,i)=>{
+  if(i<6){
+   let wrong=vocab.filter(x=>x[0]!==v[0]).sort(()=>Math.random()-.5).slice(0,2).map(x=>x[1]);
+   arr.push({type:"Vocabulary • English → Arabic",q:v[0],choices:shuffle([v[1],...wrong]),a:v[1],ex:"ترجمة الكلمة: "+v[0]+" = "+v[1]});
+  }else{
+   let wrong=vocab.filter(x=>x[0]!==v[0]).sort(()=>Math.random()-.5).slice(0,2).map(x=>x[0]);
+   arr.push({type:"Vocabulary • Arabic → English",q:v[1],choices:shuffle([v[0],...wrong]),a:v[0],ex:"الكلمة الإنجليزية الصحيحة: "+v[0]});
+  }
+ });
+ const grammar=[
+  {q:"___ a student.",choices:["I am","I is","I are"],a:"I am",e:"مع I نستخدم am → I am a student."},
+  {q:"She ___ happy.",choices:["are","is","am"],a:"is",e:"مع She نستخدم is → She is happy."},
+  {q:"They ___ ready.",choices:["is","am","are"],a:"are",e:"مع They نستخدم are → They are ready."},
+  {q:"اختر النفي الصحيح: He is tired.",choices:["He isn't tired.","He aren't tired.","He am not tired."],a:"He isn't tired.",e:"النفي مع is: is not = isn't → He isn't tired."},
+  {q:"اختر النفي الصحيح: We are late.",choices:["We isn't late.","We aren't late.","We am not late."],a:"We aren't late.",e:"النفي مع are: are not = aren't → We aren't late."},
+  {q:"اختر السؤال الصحيح: You are ready.",choices:["Are you ready?","Is you ready?","Am you ready?"],a:"Are you ready?",e:"في السؤال نضع Are قبل you → Are you ready?"},
+  {q:"اختر السؤال الصحيح: She is a champion.",choices:["Are she a champion?","Is she a champion?","Am she a champion?"],a:"Is she a champion?",e:"مع She نستخدم Is → Is she a champion?"},
+  {q:"اختر السؤال الصحيح: I am late.",choices:["Is I late?","Are I late?","Am I late?"],a:"Am I late?",e:"مع I في السؤال نستخدم Am → Am I late?"}
+ ];
+ return shuffle(arr.concat(grammar));
+}
+function startMath(){mode="math";current=shuffle([...math]);idx=0;score=0;showQuiz();}
+function showQuiz(){
+ document.getElementById("home").classList.add("hidden");document.getElementById("result").classList.add("hidden");document.getElementById("quiz").classList.remove("hidden");
+ document.getElementById("quizTitle").textContent=mode==="math"?"Mathematics":"English";
+ document.getElementById("counter").textContent=`السؤال ${idx+1} من ${current.length}`;
+ document.getElementById("bar").style.width=(idx/current.length*100)+"%";
+ let q=current[idx];document.getElementById("qtype").textContent=q.type||"Algebra • التوزيع";
+ let qt=document.getElementById("qtext"), md=document.getElementById("mathdisplay");
+ if(mode==="math"){qt.classList.add("hidden");md.classList.remove("hidden");md.textContent=q.q;}
+ else{md.classList.add("hidden");qt.classList.remove("hidden");qt.textContent=q.q;qt.classList.toggle("ar",/[\u0600-\u06FF]/.test(q.q));}
+ const opts=document.getElementById("options");opts.innerHTML="";
+ shuffle([...q.choices]).forEach(c=>{let b=document.createElement("button");b.className="option";b.textContent=c;b.onclick=()=>answer(b,c,q);opts.appendChild(b)});
+ let f=document.getElementById("feedback");f.className="feedback";f.innerHTML="";document.getElementById("next").classList.remove("show");
+}
+function answer(btn,choice,q){
+ document.querySelectorAll(".option").forEach(x=>x.classList.add("disabled"));
+ let correct=choice===q.a;
+ if(correct){score++;btn.classList.add("correct")}else{
+  btn.classList.add("wrong");
+  document.querySelectorAll(".option").forEach(x=>{if(x.textContent===q.a)x.classList.add("correct")});
+ }
+ let f=document.getElementById("feedback");f.className="feedback show "+(correct?"ok":"no");
+ f.innerHTML=(correct?"✅ إجابة صحيحة!":"❌ إجابة غير صحيحة.")+"<br><b>الإجابة الصحيحة:</b> "+q.a+
+ (q.ex?`<div class="explain">${escapeHtml(q.ex)}</div>`:"");
+ document.getElementById("next").classList.add("show");
+}
+function nextQuestion(){idx++;if(idx>=current.length)showResult();else showQuiz();}
+function showResult(){
+ document.getElementById("quiz").classList.add("hidden");document.getElementById("result").classList.remove("hidden");
+ let pct=Math.round(score/current.length*100);document.getElementById("score").textContent=`${score} / ${current.length}`;
+ document.getElementById("resultTitle").textContent=pct>=90?"🔥 ممتاز جدًا!":pct>=70?"👏 أحسنت!":pct>=50?"💪 جيد، استمر!":"📚 تحتاج مراجعة أكثر";
+ document.getElementById("resultText").textContent=`درجتك: ${pct}% — ${pct===100?"فل مارك!": "راجع الإجابات التي أخطأت فيها وحاول مرة أخرى."}`;
+}
+function restartCurrent(){mode==="math"?startMath():startEnglish();}
+function goHome(){document.getElementById("quiz").classList.add("hidden");document.getElementById("result").classList.add("hidden");document.getElementById("home").classList.remove("hidden");}
+function shuffle(a){return a.sort(()=>Math.random()-.5)}
+function escapeHtml(s){return String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")}
+</script>
+</body>
+</html>
